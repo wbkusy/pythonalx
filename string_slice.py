@@ -10,3 +10,13 @@ print(s[::3]) # cały string co 3 znak
 
 # grande fianl# reverse w pythonie
 print(s[::-1])
+a= "Hello"
+b="ALX"
+print("{} {} {}".format(a, b, 2+3))
+print(f"{a} {b} {2+5}")
+x=int(input("podaj wartość x "))
+
+print(x, type(x))
+
+
+
