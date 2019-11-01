@@ -12,18 +12,7 @@ c2 = y2
 
 b1 = x1
 n1 = y1
-print("""
-Witaj!
 
-Twoim zadaniem będzie odnaleźenie skarbu!
-Możesz się poruczać wpisując komendy:
-w-góra
-s-dół
-a-lewo
-d-prawo
-
-Uważaj! możesz wypaść poza planszę.
-po każdym ruchu możesz dostać informację o położeniu!""")
 s = 0
 while True:
     print("Mapa:")
@@ -74,15 +63,15 @@ while True:
                 else:
                     print("_", end="  ")
         print()
-        print("wygrałeś")
+        # print("wygrałeś")
         # print("odleglosc_po_wylosowaniu:", z2, c2)
-        break
-    elif odleglosc_po_ruchu > odleglosc_po_wylosowaniu:
-        print("zimno")
+        # break
+    #elif odleglosc_po_ruchu > odleglosc_po_wylosowaniu:
+        #print("zimno")
         # print(odleglosc_po_wylosowaniu)
         # print(odleglosc_po_ruchu)
-    elif odleglosc_po_ruchu < odleglosc_po_wylosowaniu:
-        print("ciepło")
+    #elif odleglosc_po_ruchu < odleglosc_po_wylosowaniu:
+        #print("ciepło")
         # print(odleglosc_po_wylosowaniu)
         # print(odleglosc_po_ruchu)
     odleglosc_po_wylosowaniu = odleglosc_po_ruchu
@@ -97,5 +86,3 @@ while True:
         n1 = y1
         c2 = y2
         s = 0
-
-# Postaraj się zwizualizowac położeneie gracza na planszy (AlA tabliczka mnożenia)

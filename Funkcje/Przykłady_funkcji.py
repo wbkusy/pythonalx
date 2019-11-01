@@ -6,10 +6,11 @@ def nazwa_funkcji():
 nazwa_funkcji()
 # wywołanie
 
-
+print(list(range(10)))
 
 def allup(x):
     return x.upper()
 
 z=allup(input("podaj słowow: ",))
 print(z)
+
