@@ -33,7 +33,7 @@ while True:
             if i == y1 and j == x1:
                 print("G", end="  ")
             else:
-                print("Y", end="  ")
+                print("_", end="  ")
     print()
     R = random.randint(1, 5)
     if R == 1:
