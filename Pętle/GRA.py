@@ -1,5 +1,7 @@
 import random
 
+
+
 # w zależności od zmiennej DEBUG printuje położenie skarbu
 x1 = random.randint(0, 9)
 x2 = random.randint(0, 9)
@@ -26,14 +28,15 @@ Uważaj! możesz wypaść poza planszę.
 po każdym ruchu możesz dostać informację o położeniu!""")
 s = 0
 while True:
-    print("Mapa:")
-    for i in range(10):
-        print()
-        for j in range(10):
-            if i == y1 and j == x1:
-                print("G", end="  ")
-            else:
-                print("_", end="  ")
+    if s == 0:
+        print("Mapa:")
+        for i in range(10):
+            print()
+            for j in range(10):
+                if i == y1 and j == x1:
+                    print("G", end="  ")
+                else:
+                    print("_", end="  ")
     print()
     R = random.randint(1, 5)
     if R == 1:
@@ -48,12 +51,48 @@ while True:
     ruch = input("podaj komendę: ")  # pyta gracza o ruch inputem
     if ruch == 's':  # zmieniamy pozycję gracza - zgodnie z komendą
         y1 = y1 + 1
+        print("Mapa:")
+        for i in range(10):
+            print()
+            for j in range(10):
+                if i == y1 and j == x1:
+                    print("G", end="  ")
+                else:
+                    print("_", end="  ")
+        print()
     elif ruch == 'w':
         y1 = y1 - 1
+        print("Mapa:")
+        for i in range(10):
+            print()
+            for j in range(10):
+                if i == y1 and j == x1:
+                    print("G", end="  ")
+                else:
+                    print("_", end="  ")
+        print()
     elif ruch == 'a':
         x1 = x1 - 1
+        print("Mapa:")
+        for i in range(10):
+            print()
+            for j in range(10):
+                if i == y1 and j == x1:
+                    print("G", end="  ")
+                else:
+                    print("_", end="  ")
+        print()
     elif ruch == 'd':
         x1 = x1 + 1
+        print("Mapa:")
+        for i in range(10):
+            print()
+            for j in range(10):
+                if i == y1 and j == x1:
+                    print("G", end="  ")
+                else:
+                    print("_", end="  ")
+        print()
     else:
         print("nie właściwy klawisz")
 
