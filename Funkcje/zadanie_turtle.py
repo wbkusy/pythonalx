@@ -28,16 +28,28 @@ turtle.speed(2)
         #turtle.forward(25)  # idzie do przodu ileś kroków
 
 # setheading wskazuje kierunki w zależności o podanego kąta np 0 to east a 180 to west
-
-
-
-for i in range(6):
-    if i % 3 == 0:
-        turtle.forward(50)
-
-    for j in range(4):
-        turtle.forward(50)
+turtle.speed(20)
+def pusty_kwadrat(x):
+    for i in range(4):
+        turtle.forward(x)
+        turtle.right(90)
+def pelny_kwadrat(x):
+    for i in range(4):
+        turtle.forward(x)
         turtle.right(90)
 
+    for j in range(x):
+        turtle.right(90)
+        turtle.forward(x)
+        turtle.left(90)
+        turtle.forward(1)
+        turtle.left(90)
+        turtle.forward(x)
+        turtle.right(90)
+x=50
 
+for i in range(5):
+    print(pusty_kwadrat(x))
+    turtle.forward(x)
+    print(pelny_kwadrat(x))
 turtle.done()
