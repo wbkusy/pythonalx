@@ -1,0 +1,7 @@
+# zdefiniuj funkcje zawierajacych liste lat przestepnych na podstawie zadanego zakresu
+# lata_przestepne(1990, 2020)
+# [1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020]
+# rok przestepny nie dzieli sie przez 100 ale jest wyjatek ze jak dzieli sie przez 400 to jest przestepny
+
+def test_lata_przestepne():
+    assert lata_przestepne(2020, 2030) == [2020, 2024, 2028]
