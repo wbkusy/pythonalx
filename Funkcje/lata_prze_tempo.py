@@ -21,9 +21,9 @@ def lata_przestepne(x, y):
             x = x + 1
     return lata
 
-c=int(input())
-z=int(input())
-print(lata_przestepne(c, z))
+#c=int(input())
+#z=int(input())
+#print(lata_przestepne(c, z))
 
 
 def test_lata_przestepne():
