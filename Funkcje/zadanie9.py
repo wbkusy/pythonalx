@@ -23,14 +23,24 @@ print(pomnoz(l))
 
 
 def tylko_liczby(x):
+    y = ""
     wynik=[]
     for i in range(len(x)):
+        #print(i)
         if x[i].isdecimal() is True:
-            wynik.append(int(x[i]))
+            y=y+str(x[i])
+        else:
+            if y != "":
+                wynik.append(int(y))
+            y = ""
+    if y != "":
+        wynik.append(int(y))
+
+
     return wynik
 
 
-print(tylko_liczby("zad149n92l59"))
+print(tylko_liczby('12sdaf99149ddd59dgee4ds6'))
 
 
 # w domu ogarnąć liczby a nie tylko cyfry np v230ty76 odda [230, 76]
