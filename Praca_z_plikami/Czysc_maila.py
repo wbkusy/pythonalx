@@ -32,13 +32,13 @@ with open("dane/" + input_file) as in_file:
 
 cleaned_emails = set()
 for email in data:
-    if email.count("@")==1:
+    if email.count("@") == 1:
         cleaned_emails.add(email.strip().lower())
-cleaned_emails=list(cleaned_emails)
+cleaned_emails = list(cleaned_emails)
 cleaned_emails.sort()
 with open("wyniki/"+output_file, "w") as f:
     for email in cleaned_emails:
-        f.write(email + "\n")
+        f.write(email + "\n")  #\n oznacza nową linię
 
 
 
