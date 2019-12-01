@@ -1,20 +1,20 @@
 import sys
 
 # input_file = sys.argv[1]
-input_file = "logs.txt"
 
+
+input_file = "logs.txt"
 with open("dane/" + input_file) as in_file:
     data = in_file.read().splitlines()
+
+
+
+
 loginy = []
 logouty = []
-
-time_counted = []
-time_counted2 = []
 for logi in data:
     y = ""
-
     if logi.count("LOGIN") == 1:
-
         for i in range(len(logi)):
             if logi[i].isdecimal() is True:
                 y = y + str(logi[i])
@@ -26,7 +26,6 @@ for logi in data:
             loginy.append(int(y))
             # print(wynik)
     elif logi.count("LOGOUT") == 1:
-
         for i in range(len(logi)):
             if logi[i].isdecimal() is True:
                 y = y + str(logi[i])
@@ -37,11 +36,14 @@ for logi in data:
         if y != "":
             logouty.append(int(y))
             # print(wynik)
-r = 0
-s=0
+
+
+
 times = []
 times2 = []
 for i in range(1, 10):
+    r = 0
+    s = 0
     for j in range(0, len(loginy), 2):
         if loginy[j] == i:
             r = r + loginy[j + 1]
@@ -50,23 +52,18 @@ for i in range(1, 10):
             s = s + logouty[m + 1]
     times.append(r)
     times2.append(s)
-print(times)
-print(times2)
+#print(times)
+#print(times2)
+
+
+
 hgw=[]
 for y in range(0, 9):
     h=times2[y]-times[y]
     hgw.append(h)
+#print(hgw)
+i = 0
+for wy in hgw:
+    i = i + 1
+    print("użytkownik " + str(i) + " był zalogowany przez: " + str(wy))
 
-print(hgw)
-#print(loginy)
-#print(logouty)
-#hgw = dict()
-#for d in range(0, len(loginy), 2):
-    #hgw = {loginy[d]: loginy[d + 1]}
-  #  time_counted.append(hgw)
-#print(time_counted)
-#hgw = dict()
-#for u in range(0, len(logouty), 2):
-  #  hgw = {logouty[u]: logouty[u + 1]}
- #   time_counted2.append(hgw)
-#print(time_counted2)
