@@ -10,18 +10,31 @@
 # 10.99
 
 class Produkt:
-    def __init__(self, id, name, price):
-        self.id = id
+
+    NEXT_ID = 1 # atrybut klasowy
+
+    def __init__(self, name, price):
+
         self.name = name
         self.price = price
+        self.id = Produkt.NEXT_ID
+        self.incr_next_id()
 
+    @classmethod
+    def get_id(cls):
+        return cls.get_id
 
-woda = Produkt(1, "woda nieg.", 1.50)
-chleb = Produkt(2, "chleb wiejski", 2.00)
-cebula = Produkt(3, "cebula dymka", 3.00)
+    @classmethod
+    def incr_next_id(cls):
+        cls.NEXT_ID += 1
 
-print(woda.price)
+    def show(self):
+        return f"{self.name} ({self.id}), cena: {self.price}"
 
-def test_product():
-    woda=Produkt(1, "woda nieg.", 1.50)
-    assert
+woda = Produkt("woda nieg.", 1.50)
+chleb = Produkt("chleb wiejski", 2.00)
+cebula = Produkt("cebula dymka", 3.00)
+
+#print(woda.price)
+
+print(Produkt.id)
