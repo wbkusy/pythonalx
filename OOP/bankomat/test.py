@@ -22,7 +22,7 @@ class TestCashMachine:
         assert b.get_money(100) == []
         b.put_money([100])
         assert b.get_money(100) == [100]
-        cm.put_money([50,50,50])
+        b.put_money([50,50,50])
         assert b.get_money(100) == [50,50]
 
 

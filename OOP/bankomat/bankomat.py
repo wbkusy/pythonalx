@@ -16,12 +16,9 @@ class CashMachine:
         if self.is_available:
             to_withdraw = []
             for money in self.money:
-                if money + sum(to_withdraw) <= amout:
+                if money + sum(to_withdraw) <= amount:
                     to_withdraw.append(money)
-            if sum(to_withdraw) == amount:
-                for money in to_withdraw:
-                    self.mo
-            return self.to_withdraw
+            return to_withdraw
         return []
 
 
