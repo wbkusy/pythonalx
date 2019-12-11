@@ -27,16 +27,14 @@ class PremiumEmployee(Employee):
 
     def __init__(self, name, surrname, rph):
         super().__init__(name, surrname, rph)
-        self.bonus = 0
+        self.bonus = []
 
     def give_bonus(self, bonus):
-        self.bonus = bonus
+        self.bonus.append(bonus)
 
     def pay_salary(self):
-        if self.registered_hours <= 8:
-            to_pay = self.registered_hours * self.rph + self.bonus
-            self.registered_hours = 0
-        else:
-            to_pay = self.rph * 8 + (self.registered_hours - 8) * self.rph * 2 + self.bonus
+        to_pay = super().pay_salary()
+        for b in self.bonus:
+            to_pay += b
         return to_pay
 

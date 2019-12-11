@@ -37,7 +37,10 @@ class TestEmployee:
 
     def test_give_bonus(self):
         e = PremiumEmployee("Jan", "Kowalski", 100)
-        e.registered_time(5)
+        e.register_time(5)
         e.give_bonus(1000)
-        assert e.pay_salary() == 1500
+        e.give_bonus(200)
+        e.give_bonus("15%")
+        e.give_bonus("35%")
+        assert e.pay_salary() == 1950
 
