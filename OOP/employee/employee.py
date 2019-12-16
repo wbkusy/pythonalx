@@ -18,10 +18,7 @@ class Employee:
         return to_pay
 
 
-#emp = Employee("Jan", "Kowalski", 200)
-#print(emp.Employee__registered_hours)
-#emp._Employee__registered_hours = 10
-#print(emp.pay_salary())
+
 
 class PremiumEmployee(Employee):
 
