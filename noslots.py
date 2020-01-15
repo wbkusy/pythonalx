@@ -4,4 +4,4 @@ class MyClass(object):
                 self.identifier = identifier
 
 num = 1024*256
-x = [MyClass(1,1) for i in range(num)]
+x = [MyClass(1, 1) for i in range(num)]
