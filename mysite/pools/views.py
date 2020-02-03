@@ -38,13 +38,13 @@ def operacje(request, op, a, b):
         return HttpResponse(int(a)/int(b))
 
 
-def Question_views(request):
-    pass
-    #q1 = Question.objects.all()
-    #text = ""
-    #for q in q1:
-    #    text +=
-    #<br>.join(q1)
+def Question_views(request, nr):
+    quest = Question.objects.all()
+    text = ""
+    for i in quest:
+        if i == int(nr):
+            text = f"{quest(i)}"
+    return HttpResponse(text)
 
 
 def index(request):
