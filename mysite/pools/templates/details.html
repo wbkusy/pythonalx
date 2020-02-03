@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{% block title %}Detale{% endblock%}
+{% block content %}
+
+<h1>{{question.question_text}}</h1>
+<h4>{{question.pub_date}}</h4>
+<h5>{{ error }}</h5>
+{{question.choice.all}}
+<form method="post" action="{% url 'pools:vote' question.id %}">
+    {% csrf_token %}
+    {% for choice in question.choices.all %}
+        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{choice.id}}">
+        <label for="choice{{ forloop.counter }}">{{choice.choice_text}}</label><br>
+    {% endfor %}
+    <input type="submit" value="Vote">
+</form>
+
+<a href="{% url 'pools:list' %}">Lista</a>
+{% endblock %}
